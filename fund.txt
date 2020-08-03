@@ -1,0 +1,28 @@
+create database vinod;
+use vinod;
+create table student( RollNo int,
+Name varchar(20),Grade float(2));
+insert into student values(1,
+'vinodkumar', 8.60);
+select * from ACCOUNTS;
+select * from transactions;	
+drop table transactions;
+truncate table transactions;
+SELECT * FROM transactions ORDER BY Timpe_Stamp DESC LIMIT 5;
+use vinod;
+CREATE TABLE  ACCOUNTS
+   (	ACCOUNTNO int, 
+	USERNAME VARCHAR(4000), 
+	AMOUNT int, 
+	ADDRESS VARCHAR(4000), 
+	PHONE varchar(15), 
+	CONSTRAINT NEWACCOUNT_PK  PRIMARY KEY (ACCOUNTNO)
+   );
+   select AMOUNT from ACCOUNTS where ACCOUNTNO=123456;
+  
+   select * from transactions;
+   SELECT * FROM transactions where ACCOUNTNO=123  ORDER BY Timpe_Stamp DESC Limit 5;
+   select * from student where RollNo=592;
+   update ACCOUNTS  set  AMOUNT=AMOUNT+50000;
+   create table transactions(ACCOUNTNO integer,TransId integer,Timpe_Stamp Timestamp,Transfer varchar(200),Avail_Balance integer);
+   
